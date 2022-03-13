@@ -2,7 +2,7 @@ FROM alpine:latest
 
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
-      version=0.0.1
+      version=0.0.2
 
 #fork https://github.com/Zenika/alpine-chrome
 # Installs latest Chromium package.
