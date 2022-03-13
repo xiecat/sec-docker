@@ -11,7 +11,7 @@ LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
       tools.xray.src="https://github.com/chaitin/xray" \
       tools.xray.desc="xray 是一款功能强大的安全评估工具" \
-      version=0.0.1
+      version=0.0.2
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
 RUN apk add  --no-cache libpcap-dev && mkdir /app

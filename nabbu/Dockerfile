@@ -12,7 +12,7 @@ LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
       tools.naabu.src="https://github.com/projectdiscovery/naabu" \
       tools.naabu.desc="Naabu is a port scanning tool written in Go that allows you to enumerate valid ports for hosts in a fast and reliable manner. It is a really simple tool that does fast SYN/CONNECT scans on the host/list of hosts and lists all ports that return a reply." \
-      version=0.0.1
+      version=0.0.2
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
 RUN apk add  --no-cache libpcap-dev && mkdir /app

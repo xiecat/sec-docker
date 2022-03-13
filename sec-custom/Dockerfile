@@ -46,7 +46,7 @@ LABEL dockerfile.maintainer="becivells" \
       tools.crawlergo.desc="A powerful browser crawler for web vulnerability scanners" \
       tools.xray.src="https://github.com/chaitin/xray" \
       tools.xray.desc="xray 是一款功能强大的安全评估工具" \
-      version=0.0.1
+      version=0.0.2
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
 

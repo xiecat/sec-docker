@@ -13,7 +13,7 @@ LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
       tools.crawlergo.src="https://github.com/Qianlitp/crawlergo" \
       tools.crawlergo.desc="A powerful browser crawler for web vulnerability scanners" \
-      version=0.0.1
+      version=0.0.2
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
 RUN mkdir /app

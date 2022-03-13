@@ -10,7 +10,7 @@ LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
       tools.subfinder.src="https://github.com/projectdiscovery/subfinder" \
       tools.subfinder.desc="Subfinder is a subdomain discovery tool that discovers valid subdomains for websites by using passive online sources. " \
-      version=0.0.1
+      version=0.0.2
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
 
