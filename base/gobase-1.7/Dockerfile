@@ -2,7 +2,7 @@ FROM golang:1.17-alpine as builder
 
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
-      version=0.0.2
+      version=0.0.1
 
 ENV GOROOT="/usr/local/go"
 ENV GOPATH="/root/go"
