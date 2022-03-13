@@ -3,9 +3,9 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/xiecat/alpine-chromium/Publish%20Releases%20to%20Hub)](https://github.com/xiecat/alpine-chromium/actions)
 使用 `github action` 生成 docker 镜像并且自动推送给 `DockerHub`
 
-latest 是最近一次更新版本
-nightly 当天版本
-yyyy-mm-dd 某天更新的版本
+latest 是最近一次更新版本   
+nightly 当天版本   
+yyyy-mm-dd 某天更新的版本   
 
 ## 每日最新版
 
