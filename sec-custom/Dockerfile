@@ -16,7 +16,7 @@ RUN mkdir -p ${GOPATH}/src/&& cd ${GOPATH}/src/ && git clone   https://github.co
     && mv crawlergo ${GOPATH}/bin
 
 RUN wget https://github.com/chaitin/xray/releases/download/$(curl -s https://api.github.com/repos/chaitin/xray/releases/latest|jq .name|tr -d '\"\nXRAY ')/xray_linux_amd64.zip \
-    && unzip xray_linux_amd64.zip &&chmod 755 xray_linux_amd64 && mv xray_linux_amd64 /usr/local/bin/xray
+    && unzip xray_linux_amd64.zip &&chmod 755 xray_linux_amd64 && mv xray_linux_amd64 /root/go/bin/
 
 
 
@@ -46,9 +46,9 @@ LABEL dockerfile.maintainer="becivells" \
       tools.crawlergo.desc="A powerful browser crawler for web vulnerability scanners" \
       tools.xray.src="https://github.com/chaitin/xray" \
       tools.xray.desc="xray 是一款功能强大的安全评估工具" \
-      version=0.0.2
+      version=0.0.3
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
 
-RUN apk add  --no-cache libpcap-dev && mkdir /app
+RUN apk add  --no-cache libpcap-dev && nuclei -ut && mkdir /app
 WORKDIR /app/
