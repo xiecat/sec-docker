@@ -10,10 +10,10 @@ RUN  apk add --no-cache --virtual .build-deps \
         gcc \
         musl-dev \
         && wget https://codeload.github.com/zhzyker/vulmap/zip/main -O /home/vulmap.zip \
-        &&  cd /home/ && unzip vulmap.zip&&mv vulmap-main vulmap && cd vulmap \
+        &&  cd /home/ && unzip vulmap.zip && mv vulmap-main vulmap && cd vulmap \
         && pip install -r requirements.txt  \
         && apk del .build-deps \
-        &&  rm -rf /home/oneforall.zip && rm -rf /tmp/*
+        &&  rm -rf /home/vulmap.zip && rm -rf /tmp/*
 
 
 
