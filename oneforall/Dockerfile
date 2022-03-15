@@ -5,7 +5,7 @@ FROM python:3.9-alpine
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
       tools.oneforall.src="https://github.com/shmilylty/OneForAll" \
-      tools.oneforall.desc="one for all subdomain" \
+      tools.oneforall.desc="one for all subdomain." \
       version=0.0.1
 
 RUN  apk add --no-cache --virtual .build-deps \
