@@ -7,6 +7,13 @@
 **nightly** 当天版本   
 **yyyy-mm-dd** 某天更新的版本   
 
+## 国内加速构建
+国内网络环境太差。为了好构建可以加入国内源测试。测试结束后移除即可
+
+```shell
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
 ## 定期更新镜像
 
 每天自动构建
