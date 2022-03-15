@@ -1,6 +1,7 @@
 FROM becivells/alpine-gcc as builder
 
-RUN apk add --update linux-headers
+
+RUN  wget https://codeload.github.com/robertdavidgraham/masscan/zip/master -O /home/masscan.zip
 RUN  cd /home/ && unzip masscan.zip && mv masscan-master masscan && cd masscan && make
 
 
