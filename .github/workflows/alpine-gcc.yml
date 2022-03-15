@@ -13,7 +13,7 @@ on:
       - 'base/alpine-gcc/Dockerfile'
 
 jobs:
-  chromium:
+  aplinegcc:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
