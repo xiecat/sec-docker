@@ -1,7 +1,11 @@
 FROM becivells/gobase-1.7 as builder
 
-RUN wget https://github.com/chaitin/xray/releases/download/$(curl -s https://api.github.com/repos/chaitin/xray/releases/latest|jq .name|tr -d '\"\nXRAY ')/xray_linux_amd64.zip \
-    && unzip xray_linux_amd64.zip &&chmod 755 xray_linux_amd64 &&mkdir -p /root/go/bin/&& mv xray_linux_amd64 /root/go/bin/xray
+# https://github.com/docker/buildx#dockerfile
+# https://www.waynerv.com/posts/building-multi-architecture-images-with-docker-buildx/
+ARG TARGETARCH
+
+RUN wget https://github.com/chaitin/xray/releases/download/$(curl -s https://api.github.com/repos/chaitin/xray/releases/latest|jq .name|tr -d '\"\nXRAY ')/xray_linux_${TARGETARCH}.zip \
+    && unzip xray_linux_${TARGETARCH}.zip &&chmod 755 xray_linux_${TARGETARCH} &&mkdir -p /root/go/bin/&& mv xray_linux_${TARGETARCH} /root/go/bin/xray
 
 
 
