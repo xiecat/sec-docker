@@ -19,7 +19,7 @@ RUN wget https://github.com/chaitin/xray/releases/download/$(curl -s https://api
     && unzip xray_linux_amd64.zip &&chmod 755 xray_linux_amd64 && mv xray_linux_amd64 /root/go/bin/xray
 
 
-RUN wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64 -o /root/go/bin/ossutil64 && chmod 755 /root/go/bin/ossutil64
+RUN cd /root/go/bin/ && wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64 && chmod 755 /root/go/bin/ossutil64
 
 
 FROM becivells/alpine-chromium
