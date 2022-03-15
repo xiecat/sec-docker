@@ -7,8 +7,6 @@ LABEL dockerfile.maintainer="becivells" \
       version=0.0.1
 
 
-RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
 RUN  apk add --no-cache --virtual .build-deps \
         gcc \
         musl-dev \
