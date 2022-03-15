@@ -11,7 +11,7 @@ LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
       tools.ksubdomain.src="https://github.com/boy-hack/ksubdomain" \
       tools.ksubdomain.desc="ksubdomain是一款基于无状态的子域名爆破工具" \
-      version=0.0.3
+      version=0.0.4
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
 RUN apk add  --no-cache libpcap-dev && mkdir /app
