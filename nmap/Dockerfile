@@ -6,7 +6,7 @@ LABEL dockerfile.maintainer="becivells" \
       tools.massdns.desc="network exploration tool and security/port scanner." \
       version=0.0.1
 
-RUN apk add nmap nmap-scripts nmap-ncat
+RUN apk add --no-cache nmap nmap-scripts nmap-ncat
 
 RUN  mkdir /app
 
