@@ -11,7 +11,7 @@ FROM python:3.9-alpine
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
       tools.massdns.src="https://github.com/blechschmidt/massdns" \
-      tools.massdns.desc="A high-performance DNS stub resolver" \
+      tools.massdns.desc="A high-performance DNS stub resolver." \
       version=0.0.1
 
 COPY --from=builder /home/massdns/bin/ /usr/local/bin/
