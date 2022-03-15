@@ -11,8 +11,9 @@ RUN  echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositori
     && apk add --no-cache \
      gcc \
      musl-dev \
-    libstdc++ \
-    make \
-    linux-headers \
+     libstdc++ \
+     make \
+     cmake \
+     linux-headers \
     && rm -rf /var/cache/* \
     && mkdir /var/cache/apk
