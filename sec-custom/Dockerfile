@@ -57,12 +57,12 @@ COPY --from=anew /usr/local/bin/ /usr/local/bin/
 
 RUN  if [ "$TARGETARCH" = "arm64" ]; \
      then  \
-     cd /root/go/bin/&& wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutilarm64 \
-     && mv ossutilarm64 ossutil && chmod 755 /root/go/bin/ossutil ; \
+     cd /usr/local/bin/ && wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutilarm64 \
+     && mv ossutilarm64 ossutil && chmod 755 /usr/local/bin/ossutil ; \
      elif [ "$TARGETARCH" = "amd64" ];  \
      then  \
-     cd /root/go/bin/ && wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64  \
-     && mv ossutil64 ossutil && chmod 755 /root/go/bin/ossutil ; \
+     cd /usr/local/bin/ && wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64  \
+     && mv ossutil64 ossutil && chmod 755 /usr/local/bin/ossutil ; \
      fi
 
 
