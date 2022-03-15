@@ -1,4 +1,4 @@
-name: Publish onforall to Hub
+name: Publish oneforall to Hub
 
 # When its time to do a release do a full cross platform build for all supported
 # architectures and push all of them to Docker Hub.
@@ -10,10 +10,10 @@ on:
     branches:
       - master
     paths:
-      - 'onforall/Dockerfile'
+      - 'oneforall/Dockerfile'
 
 jobs:
-  onforall:
+  oneforall:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,7 +22,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=becivells/onforall
+          DOCKER_IMAGE=becivells/oneforall
           
           TAGS="${DOCKER_IMAGE}:latest"
           if [ "${{ github.event_name }}" = "schedule" ]; then
@@ -56,7 +56,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
-          context: ./onforall/
+          context: ./oneforall/
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.prep.outputs.tags }}
           cache-from: type=local,src=/tmp/.buildx-cache
