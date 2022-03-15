@@ -1,25 +1,14 @@
-FROM becivells/gobase-1.7 as builder
-
-RUN go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-RUN go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-RUN go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
-RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
-RUN go install -v github.com/projectdiscovery/notify/cmd/notify@latest
-
-RUN go install -v github.com/xiecat/fofax/cmd/fofax@latest
-RUN go install -v github.com/boy-hack/ksubdomain/cmd/ksubdomain@latest
-RUN go install -v github.com/tomnomnom/anew@latest
-
-RUN mkdir -p ${GOPATH}/src/&& cd ${GOPATH}/src/ && git clone   https://github.com/Qianlitp/crawlergo \
-    && cd crawlergo && go build -o crawlergo cmd/crawlergo/crawlergo_cmd.go \
-    && mv crawlergo ${GOPATH}/bin
-
-RUN wget https://github.com/chaitin/xray/releases/download/$(curl -s https://api.github.com/repos/chaitin/xray/releases/latest|jq .name|tr -d '\"\nXRAY ')/xray_linux_amd64.zip \
-    && unzip xray_linux_amd64.zip &&chmod 755 xray_linux_amd64 && mv xray_linux_amd64 /root/go/bin/xray
-
-
-RUN cd /root/go/bin/ && wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64 && chmod 755 /root/go/bin/ossutil64
+FROM becivells/httpx as httpx
+FROM becivells/nuclei as nuclei
+FROM becivells/subfinder as subfinder
+FROM becivells/naabu as naabu
+FROM becivells/dnsx as dnsx
+FROM becivells/notify as notify
+FROM becivells/ksubdomain as ksubdomain
+FROM becivells/crawlergo as crawlergo
+FROM becivells/xray as xray
+FROM becivells/fofax as fofax
+FROM becivells/anew as anew
 
 
 FROM becivells/alpine-chromium
@@ -52,7 +41,23 @@ LABEL dockerfile.maintainer="becivells" \
       tools.xray.desc="This tool is developed with Go and built on the official GO SDK v2.2.0 of OSS Alibaba Cloud Object Storage Service." \
       version=0.0.3
 
-COPY --from=builder /root/go/bin/ /usr/local/bin/
+ARG TARGETARCH
+
+COPY --from=httpx /usr/local/bin/ /usr/local/bin/
+COPY --from=nuclei /usr/local/bin/ /usr/local/bin/
+COPY --from=subfinder /usr/local/bin/ /usr/local/bin/
+COPY --from=naabu /usr/local/bin/ /usr/local/bin/
+COPY --from=dnsx /usr/local/bin/ /usr/local/bin/
+COPY --from=notify /usr/local/bin/ /usr/local/bin/
+COPY --from=ksubdomain /usr/local/bin/ /usr/local/bin/
+COPY --from=crawlergo /usr/local/bin/ /usr/local/bin/
+COPY --from=xray /usr/local/bin/ /usr/local/bin/
+COPY --from=fofax /usr/local/bin/ /usr/local/bin/
+COPY --from=anew /usr/local/bin/ /usr/local/bin/
+
+RUN  if [ "$TARGETARCH" = "arm64" ]; then cd /root/go/bin/&&  https://gosspublic.alicdn.com/ossutil/1.7.9/ossutilarm64&& mv ossutilarm64 ossutil && && chmod 755 /root/go/bin/ossutil  \
+     elif [ "$TARGETARCH" = "amd64" ]; then cd /root/go/bin/&&  https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64 && mv ossutil64 ossutil && && chmod 755 /root/go/bin/ossutil fi
+
 
 RUN apk add  --no-cache libpcap-dev && nuclei -ut && mkdir /app
 WORKDIR /app/
