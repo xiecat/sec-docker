@@ -55,8 +55,15 @@ COPY --from=xray /usr/local/bin/ /usr/local/bin/
 COPY --from=fofax /usr/local/bin/ /usr/local/bin/
 COPY --from=anew /usr/local/bin/ /usr/local/bin/
 
-RUN  if [ "$TARGETARCH" = "arm64" ]; then cd /root/go/bin/&&  https://gosspublic.alicdn.com/ossutil/1.7.9/ossutilarm64&& mv ossutilarm64 ossutil && && chmod 755 /root/go/bin/ossutil  \
-     elif [ "$TARGETARCH" = "amd64" ]; then cd /root/go/bin/&&  https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64 && mv ossutil64 ossutil && && chmod 755 /root/go/bin/ossutil fi
+RUN  if [ "$TARGETARCH" = "arm64" ]; \
+     then  \
+     cd /root/go/bin/&& wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutilarm64 \
+     && mv ossutilarm64 ossutil && chmod 755 /root/go/bin/ossutil  \
+     elif [ "$TARGETARCH" = "amd64" ];  \
+     then  \
+     cd /root/go/bin/ && wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64  \
+     && mv ossutil64 ossutil && chmod 755 /root/go/bin/ossutil  \
+     fi
 
 
 RUN apk add  --no-cache libpcap-dev && nuclei -ut && mkdir /app
