@@ -3,6 +3,8 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/xiecat/sec-docker/Publish%20sec-custom%20to%20Hub)](https://github.com/xiecat/sec-docker/actions)
 使用 `github action` 生成 docker 镜像并且自动推送给 `DockerHub`
 
+目前已经支持 `amd64` 、`arm64`、 `arm`平台   
+
 **latest** 是最近一次更新版本   
 **nightly** 当天版本   
 **yyyy-mm-dd** 某天更新的版本   
