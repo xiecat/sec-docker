@@ -16,8 +16,10 @@ RUN mkdir -p ${GOPATH}/src/&& cd ${GOPATH}/src/ && git clone   https://github.co
     && mv crawlergo ${GOPATH}/bin
 
 RUN wget https://github.com/chaitin/xray/releases/download/$(curl -s https://api.github.com/repos/chaitin/xray/releases/latest|jq .name|tr -d '\"\nXRAY ')/xray_linux_amd64.zip \
-    && unzip xray_linux_amd64.zip &&chmod 755 xray_linux_amd64 && mv xray_linux_amd64 /root/go/bin/
+    && unzip xray_linux_amd64.zip &&chmod 755 xray_linux_amd64 && mv xray_linux_amd64 /root/go/bin/xray
 
+
+RUN wget https://gosspublic.alicdn.com/ossutil/1.7.9/ossutil64 -o /root/go/bin/ossutil64 && chmod 755 /root/go/bin/ossutil64
 
 
 FROM becivells/alpine-chromium
@@ -46,6 +48,8 @@ LABEL dockerfile.maintainer="becivells" \
       tools.crawlergo.desc="A powerful browser crawler for web vulnerability scanners" \
       tools.xray.src="https://github.com/chaitin/xray" \
       tools.xray.desc="xray 是一款功能强大的安全评估工具" \
+      tools.ossutil.src="https://github.com/aliyun/ossutil" \
+      tools.xray.desc="This tool is developed with Go and built on the official GO SDK v2.2.0 of OSS Alibaba Cloud Object Storage Service." \
       version=0.0.3
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
