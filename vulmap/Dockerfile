@@ -6,12 +6,15 @@ LABEL dockerfile.maintainer="becivells" \
       tools.oneforall.desc="Vulmap is a web vulnerability scanning and verification tool that can scan webapps for vulnerabilities and has vulnerability exploitation functions" \
       version=0.0.1
 
+
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
 RUN  apk add --no-cache --virtual .build-deps \
         gcc \
         musl-dev \
         && wget https://codeload.github.com/zhzyker/vulmap/zip/main -O /home/vulmap.zip \
         &&  cd /home/ && unzip vulmap.zip && mv vulmap-main vulmap && cd vulmap \
-        && pip install -r requirements.txt  \
+        && pip install -r requirements.txt \
         && apk del .build-deps \
         &&  rm -rf /home/vulmap.zip && rm -rf /tmp/*
 
