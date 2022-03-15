@@ -40,6 +40,7 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 |    `docker pull becivells/zmap:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/zmap/latest)](https://hub.docker.com/r/becivells/zmap/tags)             |
 |   `docker pull becivells/chaos:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/chaos/latest)](https://hub.docker.com/r/becivells/chaos/tags)           |
 |   `docker pull becivells/dismap:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dismap/latest)](https://hub.docker.com/r/becivells/dismap/tags)         |
+|   `docker pull becivells/vulmap:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/vulmap/latest)](https://hub.docker.com/r/becivells/vulmap/tags)         |
 |   `docker pull becivells/fofax:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/fofax/latest)](https://hub.docker.com/r/becivells/fofax/tags)           |
 | `docker pull becivells/interactsh:latest` | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/interactsh/latest)](https://hub.docker.com/r/becivells/interactsh/tags) |
 |   `docker pull becivells/nabbu:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/nabbu/latest)](https://hub.docker.com/r/becivells/nabbu/tags)           |
