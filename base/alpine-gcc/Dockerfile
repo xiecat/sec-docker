@@ -13,5 +13,6 @@ RUN  echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositori
      musl-dev \
     libstdc++ \
     make \
+    linux-headers \
     && rm -rf /var/cache/* \
     && mkdir /var/cache/apk
