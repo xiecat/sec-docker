@@ -24,8 +24,6 @@ RUN  echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositori
 
 COPY local.conf /etc/fonts/local.conf
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
-
 ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/ \
     CRAWLERGO_CHROMIUM_PATH=/usr/bin/chromium-browser
