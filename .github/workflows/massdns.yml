@@ -1,19 +1,19 @@
-name: Publish ksubdomain to Hub
+name: Publish massdns to Hub
 
 # When its time to do a release do a full cross platform build for all supported
 # architectures and push all of them to Docker Hub.
 # Only trigger on semver shaped tags.
 on:
   schedule:
-    - cron: '0 22 * * */4'
+    - cron: '0 23 */7 * *'
   push:
     branches:
       - master
     paths:
-      - 'ksubdomain/Dockerfile'
+      - 'massdns/Dockerfile'
 
 jobs:
-  ksubdomain:
+  massdns:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,7 +22,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=becivells/ksubdomain
+          DOCKER_IMAGE=becivells/massdns
           
           TAGS="${DOCKER_IMAGE}:latest"
           if [ "${{ github.event_name }}" = "schedule" ]; then
@@ -56,7 +56,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
-          context: ./ksubdomain
+          context: ./massdns/
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.prep.outputs.tags }}
           cache-from: type=local,src=/tmp/.buildx-cache

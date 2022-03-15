@@ -5,7 +5,7 @@ name: Publish interactsh to Hub
 # Only trigger on semver shaped tags.
 on:
   schedule:
-    - cron: '0 23 * * */6'
+    - cron: '0 23 * * */4'
   push:
     branches:
       - master
