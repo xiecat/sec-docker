@@ -27,6 +27,7 @@
 |                    版本                     | 镜像大小                                                                                                                                                   |
 |:-----------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |    `docker pull becivells/anew:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/anew/latest)](https://hub.docker.com/r/becivells/anew/tags)             |
+|    `docker pull becivells/nmap:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/nmap/latest)](https://hub.docker.com/r/becivells/nmap/tags)             |
 |   `docker pull becivells/chaos:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/chaos/latest)](https://hub.docker.com/r/becivells/chaos/tags)           |
 |   `docker pull becivells/dismap:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dismap/latest)](https://hub.docker.com/r/becivells/dismap/tags)         |
 |   `docker pull becivells/fofax:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/fofax/latest)](https://hub.docker.com/r/becivells/fofax/tags)           |
