@@ -13,7 +13,7 @@ LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
       tools.dismap.src="https://github.com/zhzyker/dismap" \
       tools.dismap.desc="Dismap positioning is an asset discovery and identification tool." \
-      version=0.0.2
+      version=0.0.3
 
 COPY --from=builder /root/go/bin/ /usr/local/bin/
 RUN mkdir /app
