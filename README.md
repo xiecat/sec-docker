@@ -7,7 +7,7 @@
 **nightly** 当天版本   
 **yyyy-mm-dd** 某天更新的版本   
 
-## 每日最新版
+## 定期更新镜像
 
 每天自动构建
 
@@ -44,3 +44,4 @@
 |  `docker pull becivells/proxify:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/proxify/latest)](https://hub.docker.com/r/becivells/proxify/tags)       |
 |  `docker pull becivells/massdns:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/massdns/latest)](https://hub.docker.com/r/becivells/massdns/tags)       |
 | `docker pull becivells/subfinder:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/subfinder/latest)](https://hub.docker.com/r/becivells/subfinder/tags)   |
+| `docker pull becivells/oneforall:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/oneforall/latest)](https://hub.docker.com/r/becivells/oneforall/tags)   |
