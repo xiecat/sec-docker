@@ -45,3 +45,4 @@
 |  `docker pull becivells/massdns:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/massdns/latest)](https://hub.docker.com/r/becivells/massdns/tags)       |
 | `docker pull becivells/subfinder:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/subfinder/latest)](https://hub.docker.com/r/becivells/subfinder/tags)   |
 | `docker pull becivells/oneforall:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/oneforall/latest)](https://hub.docker.com/r/becivells/oneforall/tags)   |
+|  `docker pull becivells/masscan:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/masscan/latest)](https://hub.docker.com/r/becivells/masscan/tags)   |
