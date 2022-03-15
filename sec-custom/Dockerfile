@@ -1,7 +1,7 @@
 FROM becivells/httpx as httpx
 FROM becivells/nuclei as nuclei
 FROM becivells/subfinder as subfinder
-FROM becivells/naabu as naabu
+FROM becivells/nabbu as nabbu
 FROM becivells/dnsx as dnsx
 FROM becivells/notify as notify
 FROM becivells/ksubdomain as ksubdomain
@@ -46,7 +46,7 @@ ARG TARGETARCH
 COPY --from=httpx /usr/local/bin/ /usr/local/bin/
 COPY --from=nuclei /usr/local/bin/ /usr/local/bin/
 COPY --from=subfinder /usr/local/bin/ /usr/local/bin/
-COPY --from=naabu /usr/local/bin/ /usr/local/bin/
+COPY --from=nabbu /usr/local/bin/ /usr/local/bin/
 COPY --from=dnsx /usr/local/bin/ /usr/local/bin/
 COPY --from=notify /usr/local/bin/ /usr/local/bin/
 COPY --from=ksubdomain /usr/local/bin/ /usr/local/bin/
