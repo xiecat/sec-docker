@@ -1,7 +1,7 @@
 
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
-      version=0.0.3
+      version=0.0.4
 
 #fork https://github.com/Zenika/alpine-chrome
 # Installs latest Chromium package.
@@ -19,7 +19,7 @@ RUN  echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositori
     font-noto-emoji \
     wqy-zenhei \
     py3-pip \
-    curl   \
+    curl  \
     && rm -rf /var/cache/* \
     && mkdir /var/cache/apk
 
