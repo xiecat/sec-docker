@@ -1,4 +1,3 @@
-FROM alpine:latest
 
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
@@ -20,6 +19,7 @@ RUN  echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositori
     font-noto-emoji \
     wqy-zenhei \
     py3-pip \
+    curl   \
     && rm -rf /var/cache/* \
     && mkdir /var/cache/apk
 
