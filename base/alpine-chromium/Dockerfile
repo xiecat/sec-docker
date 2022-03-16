@@ -19,7 +19,6 @@ RUN  echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositori
     ttf-freefont \
     font-noto-emoji \
     wqy-zenhei \
-    curl  \
     && rm -rf /var/cache/* \
     && mkdir /var/cache/apk
 
