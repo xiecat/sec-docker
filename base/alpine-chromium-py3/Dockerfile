@@ -1,3 +1,4 @@
+FROM alpine:latest
 
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
