@@ -39,7 +39,7 @@ LABEL dockerfile.maintainer="becivells" \
       tools.xray.desc="xray 是一款功能强大的安全评估工具" \
       tools.ossutil.src="https://github.com/aliyun/ossutil" \
       tools.xray.desc="This tool is developed with Go and built on the official GO SDK v2.2.0 of OSS Alibaba Cloud Object Storage Service." \
-      version=0.0.4
+      version=0.0.5
 
 ARG TARGETARCH
 
