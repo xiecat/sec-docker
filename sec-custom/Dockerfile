@@ -66,5 +66,5 @@ RUN  if [ "$TARGETARCH" = "arm64" ]; \
      fi
 
 
-RUN apk add  --no-cache libpcap-dev && nuclei -ut && mkdir /app
+RUN apk add  --no-cache libpcap-dev curl && nuclei -ut && mkdir /app
 WORKDIR /app/
