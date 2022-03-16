@@ -9,4 +9,5 @@ ENV GOPATH="/root/go"
 ENV PATH="${PATH}:${GOROOT}/bin:${GOPATH}/bin"
 ENV CGO_ENABLED=1
 
+
 RUN apk  add curl git gcc  libc-dev  libpcap-dev jq
