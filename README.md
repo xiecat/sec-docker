@@ -35,32 +35,34 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 ### 应用镜像
 
-| 版本                                        | 镜像大小                                                                                                                                                   |
+|                    版本                     | 镜像大小                                                                                                                                                   |
 |:-----------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| `docker pull becivells/anew:latest`       | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/anew/latest)](https://hub.docker.com/r/becivells/anew/tags)             |
-| `docker pull becivells/nmap:latest`       | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/nmap/latest)](https://hub.docker.com/r/becivells/nmap/tags)             |
-| `docker pull becivells/zmap:latest`       | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/zmap/latest)](https://hub.docker.com/r/becivells/zmap/tags)             |
-| `docker pull becivells/chaos:latest`      | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/chaos/latest)](https://hub.docker.com/r/becivells/chaos/tags)           |
-| `docker pull becivells/dismap:latest`     | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dismap/latest)](https://hub.docker.com/r/becivells/dismap/tags)         |
-| `docker pull becivells/vulmap:latest`     | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/vulmap/latest)](https://hub.docker.com/r/becivells/vulmap/tags)         |
-| `docker pull becivells/fofax:latest`      | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/fofax/latest)](https://hub.docker.com/r/becivells/fofax/tags)           |
+|    `docker pull becivells/anew:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/anew/latest)](https://hub.docker.com/r/becivells/anew/tags)             |
+|    `docker pull becivells/nmap:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/nmap/latest)](https://hub.docker.com/r/becivells/nmap/tags)             |
+|    `docker pull becivells/zmap:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/zmap/latest)](https://hub.docker.com/r/becivells/zmap/tags)             |
+|   `docker pull becivells/chaos:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/chaos/latest)](https://hub.docker.com/r/becivells/chaos/tags)           |
+|   `docker pull becivells/dismap:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dismap/latest)](https://hub.docker.com/r/becivells/dismap/tags)         |
+|   `docker pull becivells/vulmap:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/vulmap/latest)](https://hub.docker.com/r/becivells/vulmap/tags)         |
+|   `docker pull becivells/fofax:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/fofax/latest)](https://hub.docker.com/r/becivells/fofax/tags)           |
 | `docker pull becivells/interactsh:latest` | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/interactsh/latest)](https://hub.docker.com/r/becivells/interactsh/tags) |
-| `docker pull becivells/nabbu:latest`      | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/nabbu/latest)](https://hub.docker.com/r/becivells/nabbu/tags)           |
-| `docker pull becivells/nuclei:latest`     | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/nuclei/latest)](https://hub.docker.com/r/becivells/nuclei/tags)         |
+|   `docker pull becivells/nabbu:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/nabbu/latest)](https://hub.docker.com/r/becivells/nabbu/tags)           |
+|   `docker pull becivells/nuclei:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/nuclei/latest)](https://hub.docker.com/r/becivells/nuclei/tags)         |
 | `docker pull becivells/sec-custom:latest` | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/sec-custom/latest)](https://hub.docker.com/r/becivells/sec-custom/tags) |
-| `docker pull becivells/xray:latest`       | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/xray/latest)](https://hub.docker.com/r/becivells/xray/tags)             |
-| `docker pull becivells/amass:latest`      | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/amass/latest)](https://hub.docker.com/r/becivells/amass/tags)           |
+|    `docker pull becivells/xray:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/xray/latest)](https://hub.docker.com/r/becivells/xray/tags)             |
+|   `docker pull becivells/amass:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/amass/latest)](https://hub.docker.com/r/becivells/amass/tags)           |
 | `docker pull becivells/crawlergo:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/crawlergo/latest)](https://hub.docker.com/r/becivells/crawlergo/tags)   |
-| `docker pull becivells/dnsx:latest`       | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dnsx/latest)](https://hub.docker.com/r/becivells/dnsx/tags)             |
-| `docker pull becivells/httpx:latest`      | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/httpx/latest)](https://hub.docker.com/r/becivells/httpx/tags)           |
+|    `docker pull becivells/dnsx:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dnsx/latest)](https://hub.docker.com/r/becivells/dnsx/tags)             |
+|   `docker pull becivells/httpx:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/httpx/latest)](https://hub.docker.com/r/becivells/httpx/tags)           |
 | `docker pull becivells/ksubdomain:latest` | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/ksubdomain/latest)](https://hub.docker.com/r/becivells/ksubdomain/tags) |
-| `docker pull becivells/notify:latest`     | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/notify/latest)](https://hub.docker.com/r/becivells/notify/tags)         |
-| `docker pull becivells/proxify:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/proxify/latest)](https://hub.docker.com/r/becivells/proxify/tags)       |
+|   `docker pull becivells/notify:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/notify/latest)](https://hub.docker.com/r/becivells/notify/tags)         |
+|  `docker pull becivells/proxify:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/proxify/latest)](https://hub.docker.com/r/becivells/proxify/tags)       |
 | `docker pull becivells/pocsuite3:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/pocsuite3/latest)](https://hub.docker.com/r/becivells/pocsuite3/tags)   |
-| `docker pull becivells/massdns:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/massdns/latest)](https://hub.docker.com/r/becivells/massdns/tags)       |
+| `docker pull becivells/dirsearch:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dirsearch/latest)](https://hub.docker.com/r/becivells/dirsearch/tags)   |
+|  `docker pull becivells/massdns:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/massdns/latest)](https://hub.docker.com/r/becivells/massdns/tags)       |
 | `docker pull becivells/subfinder:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/subfinder/latest)](https://hub.docker.com/r/becivells/subfinder/tags)   |
 | `docker pull becivells/oneforall:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/oneforall/latest)](https://hub.docker.com/r/becivells/oneforall/tags)   |
-| `docker pull becivells/masscan:latest`    | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/masscan/latest)](https://hub.docker.com/r/becivells/masscan/tags)       |
+|  `docker pull becivells/masscan:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/masscan/latest)](https://hub.docker.com/r/becivells/masscan/tags)       |
+|  `docker pull becivells/yaklang:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/yaklang/latest)](https://hub.docker.com/r/becivells/yaklang/tags)       |
 
 
 
