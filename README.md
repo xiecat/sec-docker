@@ -56,6 +56,7 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 | `docker pull becivells/ksubdomain:latest` | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/ksubdomain/latest)](https://hub.docker.com/r/becivells/ksubdomain/tags) |
 |   `docker pull becivells/notify:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/notify/latest)](https://hub.docker.com/r/becivells/notify/tags)         |
 |  `docker pull becivells/proxify:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/proxify/latest)](https://hub.docker.com/r/becivells/proxify/tags)       |
+|  `docker pull becivells/dumpall:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dumpall/latest)](https://hub.docker.com/r/becivells/dumpall/tags)       |
 | `docker pull becivells/pocsuite3:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/pocsuite3/latest)](https://hub.docker.com/r/becivells/pocsuite3/tags)   |
 | `docker pull becivells/dirsearch:latest`  | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/dirsearch/latest)](https://hub.docker.com/r/becivells/dirsearch/tags)   |
 |  `docker pull becivells/massdns:latest`   | [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/becivells/massdns/latest)](https://hub.docker.com/r/becivells/massdns/tags)       |
