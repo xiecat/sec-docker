@@ -2,8 +2,8 @@ FROM python:3.9-alpine
 
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
-      tools.oneforall.src="https://github.com/maurosoria/dirsearch" \
-      tools.oneforall.desc="An advanced command-line tool designed to brute force directories and files in webservers, AKA web path scanner" \
+      tools.dirsearch.src="https://github.com/maurosoria/dirsearch" \
+      tools.dirsearch.desc="An advanced command-line tool designed to brute force directories and files in webservers, AKA web path scanner" \
       version=0.0.1
 
 RUN  apk add --no-cache --virtual .build-deps \

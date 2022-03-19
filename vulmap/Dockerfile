@@ -2,8 +2,8 @@ FROM python:3.9-alpine
 
 LABEL dockerfile.maintainer="becivells" \
       dockerfile.reference="https://github.com/xiecat/sec-docker" \
-      tools.oneforall.src="https://github.com/zhzyker/vulmap" \
-      tools.oneforall.desc="Vulmap is a web vulnerability scanning and verification tool that can scan webapps for vulnerabilities and has vulnerability exploitation functions" \
+      tools.vulmap.src="https://github.com/zhzyker/vulmap" \
+      tools.vulmap.desc="Vulmap is a web vulnerability scanning and verification tool that can scan webapps for vulnerabilities and has vulnerability exploitation functions" \
       version=0.0.1
 
 
